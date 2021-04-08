@@ -35,7 +35,7 @@ public class Tarifa {
     }
 
     public Double calcularTotal(String tipoVehiculo, LocalDateTime fechaIngreso, LocalDateTime fechaSalida) {
-        Double valorTotal = 0D;
+        Double valorTotal;
         switch (tipoVehiculo) {
             case "AUTOMOVIL":
                 valorTotal = calcularTarifaAutomovil(fechaIngreso, fechaSalida);
@@ -43,6 +43,8 @@ public class Tarifa {
             case "MOTO":
                 valorTotal = calcularTarifaMoto(fechaIngreso, fechaSalida);
                 break;
+            default:
+                valorTotal=0D;
         }
         return valorTotal;
     }

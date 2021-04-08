@@ -1,11 +1,7 @@
 package com.ceiba.configuracion;
 
 import com.ceiba.usuario.puerto.repositorio.RepositorioOrden;
-import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import com.ceiba.usuario.puerto.repositorio.RepositorioVehiculo;
-import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
-import com.ceiba.usuario.servicio.ServicioCrearUsuario;
-import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
 import com.ceiba.usuario.servicio.orden.ServicioActualizarOrden;
 import com.ceiba.usuario.servicio.orden.ServicioEliminarOrden;
 import com.ceiba.usuario.servicio.orden.ServicioGenerarOrdenSalida;
@@ -17,22 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanServicio {
-
-    @Bean
-    public ServicioCrearUsuario servicioCrearUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioCrearUsuario(repositorioUsuario);
-    }
-
-    @Bean
-    public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioEliminarUsuario(repositorioUsuario);
-    }
-
-    @Bean
-    public ServicioActualizarUsuario servicioActualizarUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioActualizarUsuario(repositorioUsuario);
-    }
-
+    
     @Bean
     public ServicioRegistrarVehiculo servicioRegistrarVehiculo(RepositorioVehiculo repositorioVehiculo){
         return  new ServicioRegistrarVehiculo(repositorioVehiculo);

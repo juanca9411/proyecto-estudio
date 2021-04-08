@@ -27,7 +27,7 @@ public class ServicioGenerarOrdenSalida {
     }
 
     private void validarExistenciaOrden(Orden orden){
-        if (!this.repositorioOrden.existe(orden.getIdOrden())){
+        if (this.repositorioOrden.existe(orden.getIdOrden()).equals(false)){
             throw new ExepcionOrdenYaIngresada(NO_EXISTE_ORDEN);
         }
     }

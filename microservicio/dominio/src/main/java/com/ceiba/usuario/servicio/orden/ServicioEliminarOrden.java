@@ -18,7 +18,7 @@ public class ServicioEliminarOrden {
     }
 
     private void validarExistenciaOrden(Long idOrden){
-        if (!this.repositorioOrden.existe(idOrden)){
+        if (this.repositorioOrden.existe(idOrden).equals(false)){
             throw new ExepcionOrdenYaIngresada(NO_EXISTE_ORDEN);
         }
     }

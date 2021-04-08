@@ -20,7 +20,7 @@ public class ServicioRegistrarOrden {
     }
 
     private void validarExistenciaOrden(Orden orden){
-        if (this.repositorioOrden.existe(orden.getIdOrden())){
+        if (this.repositorioOrden.existe(orden.getIdOrden()).equals(true)){
             throw new ExepcionOrdenYaIngresada(YA_EXISTE_ESTA_ORDEN);
         }
     }
