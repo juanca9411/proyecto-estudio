@@ -1,0 +1,1 @@
+select count(1) from orden where id_orden = :id_orden

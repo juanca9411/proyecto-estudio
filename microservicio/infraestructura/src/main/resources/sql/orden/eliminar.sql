@@ -1,0 +1,1 @@
+delete from orden where id_orden = :id_orden
