@@ -21,13 +21,13 @@ pipeline {
     stage('Checkout') {
       steps{
         echo "------------>Checkout<------------"
-    // checkout([$class: 'GitSCM',
-     //branches: [[name: '*/master']],
-     // extensions: [],
-      //userRemoteConfigs: [[credentialsId: 'GitHub_juanca9411',
-        //       gitTool: 'Default',
-        //       submoduleCfg: [],
-      //  url: 'https://github.com/juanca9411/proyecto-estudio.git']]])
+     checkout([$class: 'GitSCM',
+     branches: [[name: '*/master']],
+      extensions: [],
+      userRemoteConfigs: [[credentialsId: 'GitHub_juanca9411',
+               gitTool: 'Default',
+               submoduleCfg: [],
+        url: 'https://github.com/juanca9411/proyecto-estudio.git']]])
 
       //  sh 'gradle --b ./microservicio/build.gradle clean'
       }
