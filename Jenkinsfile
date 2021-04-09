@@ -27,14 +27,14 @@ pipeline {
                submoduleCfg: [],
         url: 'https://github.com/juanca9411/proyecto-estudio.git']]])
 
-      //  sh 'gradle --b ./microservicio/build.gradle clean'
+        sh 'gradle --b ./microservicio/build.gradle clean'
       }
     }
 
     stage('Compile & Unit Tests') {
       steps{
         echo "------------>Unit Tests<------------"
-      //  sh 'gradle --b ./microservicio/build.gradle test'
+        sh 'gradle --b ./microservicio/build.gradle test'
 
       }
     }
@@ -51,7 +51,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-      //  sh 'gradle --b ./microservicio/build.gradle build -x test'
+        sh 'gradle --b ./microservicio/build.gradle build -x test'
       }
     }
   }
