@@ -21,7 +21,6 @@ public class Orden {
     private LocalDateTime fechaIngreso;
     private LocalDateTime fechaSalida;
     private Double valorTotal;
-    private Tarifa tarifa;
 
 
     public Orden(Long idOrden, String placa, LocalDateTime fechaIngreso, LocalDateTime fechaSalida, Double valorTotal) {
@@ -44,7 +43,7 @@ public class Orden {
     }
 
     public void generarOrdenSalida(String tipoVehiculo){
-        tarifa = new Tarifa();
+       Tarifa tarifa = new Tarifa();
         validarObligatorio(this.fechaSalida, DEBE_INGRESAR_FECHA_DE_SALIDA);
         validarFechaFindeSemana(this.fechaSalida);
         this.valorTotal = tarifa.calcularTotal(tipoVehiculo,this.fechaIngreso,this.fechaSalida);
