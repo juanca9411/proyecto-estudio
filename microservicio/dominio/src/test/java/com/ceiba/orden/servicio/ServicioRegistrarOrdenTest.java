@@ -19,7 +19,7 @@ public class ServicioRegistrarOrdenTest {
     public void validarFechaFindeSemana() {
         //arrange
         OrdenDataTestBuilder ordenDataTestBuilder = new OrdenDataTestBuilder()
-                .conFechaIngreso(LocalDateTime.of(2021, 04, 10, 00, 00));
+                .conFechaIngreso(LocalDateTime.of(2021, 4, 10, 0, 0));
         //act-assert
         BasePrueba.assertThrows(() -> ordenDataTestBuilder.build(), ExcepcionDiaNoHabil.class, "Solo se pueden ingresar o salir vehiculos en dias habiles");
     }
@@ -45,14 +45,14 @@ public class ServicioRegistrarOrdenTest {
     }
 
     @Test
-    public void validarExistenciaOrden(){
+    public void validarExistenciaOrden() {
         //arrange
         Orden orden = new OrdenDataTestBuilder().build();
         RepositorioOrden repositorioOrden = Mockito.mock(RepositorioOrden.class);
         Mockito.when(repositorioOrden.existe(orden.getIdOrden())).thenReturn(true);
         ServicioRegistrarOrden servicioRegistrarOrden = new ServicioRegistrarOrden(repositorioOrden);
         //act-assert
-        BasePrueba.assertThrows(()->servicioRegistrarOrden.ejecutar(orden), ExepcionOrdenYaIngresada.class,"Ya existe esta orden");
+        BasePrueba.assertThrows(() -> servicioRegistrarOrden.ejecutar(orden), ExepcionOrdenYaIngresada.class, "Ya existe esta orden");
     }
 
 }

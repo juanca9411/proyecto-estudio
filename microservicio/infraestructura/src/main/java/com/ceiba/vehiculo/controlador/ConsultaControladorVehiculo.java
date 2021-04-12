@@ -17,18 +17,18 @@ public class ConsultaControladorVehiculo {
     private ManejadorListarVehiculo manejadorListarVehiculo;
     private ManejadorListarVehiculoByPlaca manejadorListarVehiculoByPlaca;
 
-    public ConsultaControladorVehiculo(ManejadorListarVehiculo manejadorListarVehiculo,ManejadorListarVehiculoByPlaca manejadorListarVehiculoByPlaca){
-        this.manejadorListarVehiculo=manejadorListarVehiculo;
-        this.manejadorListarVehiculoByPlaca=manejadorListarVehiculoByPlaca;
+    public ConsultaControladorVehiculo(ManejadorListarVehiculo manejadorListarVehiculo, ManejadorListarVehiculoByPlaca manejadorListarVehiculoByPlaca) {
+        this.manejadorListarVehiculo = manejadorListarVehiculo;
+        this.manejadorListarVehiculoByPlaca = manejadorListarVehiculoByPlaca;
     }
 
     @GetMapping
-    public List<DtoVehiculo> listar(){
+    public List<DtoVehiculo> listar() {
         return this.manejadorListarVehiculo.ejecutar();
     }
 
     @GetMapping(value = "/{placa}")
-    public List<DtoVehiculo> listar(@PathVariable String placa){
+    public List<DtoVehiculo> listar(@PathVariable String placa) {
         return this.manejadorListarVehiculoByPlaca.ejecutar(placa);
     }
 }

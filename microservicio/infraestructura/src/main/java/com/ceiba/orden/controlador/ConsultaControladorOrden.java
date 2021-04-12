@@ -23,12 +23,12 @@ public class ConsultaControladorOrden {
     }
 
     @GetMapping
-    public List<DtoOrden> listar(){
+    public List<DtoOrden> listar() {
         return this.manejadorListadoOrden.listar();
     }
 
     @GetMapping(value = "/{idOrden}")
-    public List<DtoOrden> listar(@PathVariable Long idOrden){
+    public List<DtoOrden> listar(@PathVariable Long idOrden) {
         return this.manejadorGetDetalleOrden.listar(idOrden);
     }
 

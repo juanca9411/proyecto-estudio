@@ -14,5 +14,5 @@ public class ComandoVehiculo {
     private Long idVehiculo;
     private String placa;
     private Integer cilindraje;
-    private  String tipo;
+    private String tipo;
 }

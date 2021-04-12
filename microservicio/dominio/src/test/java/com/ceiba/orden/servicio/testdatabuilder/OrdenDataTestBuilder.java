@@ -18,43 +18,42 @@ public class OrdenDataTestBuilder {
     private LocalDateTime fechaSalida;
     private Double valorTotal;
 
-    public OrdenDataTestBuilder(){
-        this.idOrden=ID_ORDEN;
-        this.placa=PLACA;
-        this.fechaIngreso=FECHA_INGRESO;
-        this.fechaSalida=FECHA_SALIDA;
-        this.valorTotal=VALOR_TOTAL;
+    public OrdenDataTestBuilder() {
+        this.idOrden = ID_ORDEN;
+        this.placa = PLACA;
+        this.fechaIngreso = FECHA_INGRESO;
+        this.fechaSalida = FECHA_SALIDA;
+        this.valorTotal = VALOR_TOTAL;
     }
 
-    public OrdenDataTestBuilder conIdOrden(Long idOrden){
-        this.idOrden=idOrden;
+    public OrdenDataTestBuilder conIdOrden(Long idOrden) {
+        this.idOrden = idOrden;
         return this;
     }
 
-    public OrdenDataTestBuilder conPlaca(String placa){
-        this.placa=placa;
+    public OrdenDataTestBuilder conPlaca(String placa) {
+        this.placa = placa;
         return this;
     }
 
-    public OrdenDataTestBuilder conFechaIngreso(LocalDateTime fechaIngreso){
-        this.fechaIngreso=fechaIngreso;
+    public OrdenDataTestBuilder conFechaIngreso(LocalDateTime fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
         return this;
     }
 
-    public OrdenDataTestBuilder conFechaSalida(LocalDateTime fechaSalida){
-        this.fechaSalida=fechaSalida;
+    public OrdenDataTestBuilder conFechaSalida(LocalDateTime fechaSalida) {
+        this.fechaSalida = fechaSalida;
         return this;
     }
 
-    public OrdenDataTestBuilder conValorTotal(Double valorTotal){
-        this.valorTotal=valorTotal;
+    public OrdenDataTestBuilder conValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
         return this;
     }
 
-    public Orden build(){
-        return new Orden(idOrden,placa,fechaIngreso,fechaSalida,valorTotal);
+    public Orden build() {
+        return new Orden(idOrden, placa, fechaIngreso, fechaSalida, valorTotal);
     }
-
 
 
 }

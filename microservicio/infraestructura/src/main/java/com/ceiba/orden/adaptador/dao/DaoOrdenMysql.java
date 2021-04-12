@@ -15,10 +15,10 @@ public class DaoOrdenMysql implements DaoOrden {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace = "orden", value = "listar")
-    private  static String sqlListar;
+    private static String sqlListar;
 
     @SqlStatement(namespace = "orden", value = "listarByIdOrden")
-    private  static String sqlListarByIdOrden;
+    private static String sqlListarByIdOrden;
 
     public DaoOrdenMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
@@ -32,8 +32,8 @@ public class DaoOrdenMysql implements DaoOrden {
     @Override
     public List<DtoOrden> getDetalle(Long idOrden) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("id_orden",idOrden);
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarByIdOrden,parameterSource, new MapeoOrden());
+        parameterSource.addValue("id_orden", idOrden);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarByIdOrden, parameterSource, new MapeoOrden());
     }
 
 

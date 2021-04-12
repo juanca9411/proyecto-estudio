@@ -9,18 +9,18 @@ import com.ceiba.usuario.servicio.vehiculo.ServicioActualizarVehiculo;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ManejadorActualizarVehiculo implements ManejadorComandoRespuesta<ComandoVehiculo,ComandoRespuesta<Boolean>> {
+public class ManejadorActualizarVehiculo implements ManejadorComandoRespuesta<ComandoVehiculo, ComandoRespuesta<Boolean>> {
 
     private final FabricaVehiculo fabricaVehiculo;
     private final ServicioActualizarVehiculo servicioActualizarVehiculo;
 
-    public ManejadorActualizarVehiculo(FabricaVehiculo fabricaVehiculo, ServicioActualizarVehiculo servicioActualizarVehiculo){
-        this.fabricaVehiculo=fabricaVehiculo;
-        this.servicioActualizarVehiculo=servicioActualizarVehiculo;
+    public ManejadorActualizarVehiculo(FabricaVehiculo fabricaVehiculo, ServicioActualizarVehiculo servicioActualizarVehiculo) {
+        this.fabricaVehiculo = fabricaVehiculo;
+        this.servicioActualizarVehiculo = servicioActualizarVehiculo;
     }
 
     public ComandoRespuesta<Boolean> ejecutar(ComandoVehiculo comandoVehiculo) {
         Vehiculo vehiculo = this.fabricaVehiculo.crear(comandoVehiculo);
-       return new ComandoRespuesta<>(this.servicioActualizarVehiculo.ejecutar(vehiculo));
+        return new ComandoRespuesta<>(this.servicioActualizarVehiculo.ejecutar(vehiculo));
     }
 }

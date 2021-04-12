@@ -17,6 +17,6 @@ public class MapeoVehiculo implements RowMapper<DtoVehiculo>, MapperResult {
         Integer cilindraje = rs.getInt("cilindraje");
         String tipo = rs.getString("tipo");
 
-        return new DtoVehiculo(idVehiculo,placa,cilindraje,tipo);
+        return new DtoVehiculo(idVehiculo, placa, cilindraje, tipo);
     }
 }

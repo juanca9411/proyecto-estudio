@@ -11,11 +11,11 @@ public class ManejadorListarVehiculo {
 
     private final DaoVehiculo daoVehiculo;
 
-    public ManejadorListarVehiculo(DaoVehiculo daoVehiculo){
-        this.daoVehiculo=daoVehiculo;
+    public ManejadorListarVehiculo(DaoVehiculo daoVehiculo) {
+        this.daoVehiculo = daoVehiculo;
     }
 
-    public List<DtoVehiculo> ejecutar(){
+    public List<DtoVehiculo> ejecutar() {
         return this.daoVehiculo.listar();
     }
 

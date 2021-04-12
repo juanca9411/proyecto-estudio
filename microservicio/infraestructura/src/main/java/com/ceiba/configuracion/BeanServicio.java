@@ -13,35 +13,35 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanServicio {
-    
+
     @Bean
-    public ServicioRegistrarVehiculo servicioRegistrarVehiculo(RepositorioVehiculo repositorioVehiculo){
-        return  new ServicioRegistrarVehiculo(repositorioVehiculo);
+    public ServicioRegistrarVehiculo servicioRegistrarVehiculo(RepositorioVehiculo repositorioVehiculo) {
+        return new ServicioRegistrarVehiculo(repositorioVehiculo);
     }
 
     @Bean
-    public ServicioActualizarVehiculo servicioActualizarVehiculo(RepositorioVehiculo repositorioVehiculo){
+    public ServicioActualizarVehiculo servicioActualizarVehiculo(RepositorioVehiculo repositorioVehiculo) {
         return new ServicioActualizarVehiculo(repositorioVehiculo);
     }
 
     @Bean
-    public ServicioRegistrarOrden servicioRegistrarOrden(RepositorioOrden repositorioOrden){
+    public ServicioRegistrarOrden servicioRegistrarOrden(RepositorioOrden repositorioOrden) {
         return new ServicioRegistrarOrden(repositorioOrden);
     }
 
     @Bean
-    public ServicioActualizarOrden servicioActualizarOrden(RepositorioOrden repositorioOrden){
+    public ServicioActualizarOrden servicioActualizarOrden(RepositorioOrden repositorioOrden) {
         return new ServicioActualizarOrden(repositorioOrden);
     }
 
     @Bean
-    public ServicioEliminarOrden servicioEliminarOrden(RepositorioOrden repositorioOrden){
+    public ServicioEliminarOrden servicioEliminarOrden(RepositorioOrden repositorioOrden) {
         return new ServicioEliminarOrden(repositorioOrden);
     }
 
     @Bean
-    public ServicioGenerarOrdenSalida servicioGenerarOrdenSalida(RepositorioOrden repositorioOrden,RepositorioVehiculo repositorioVehiculo){
-        return new ServicioGenerarOrdenSalida(repositorioOrden,repositorioVehiculo);
+    public ServicioGenerarOrdenSalida servicioGenerarOrdenSalida(RepositorioOrden repositorioOrden, RepositorioVehiculo repositorioVehiculo) {
+        return new ServicioGenerarOrdenSalida(repositorioOrden, repositorioVehiculo);
     }
 
 

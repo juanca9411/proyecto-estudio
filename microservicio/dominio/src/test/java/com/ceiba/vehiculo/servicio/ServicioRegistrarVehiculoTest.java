@@ -67,12 +67,12 @@ public class ServicioRegistrarVehiculoTest {
     }
 
     @Test
-    public void validarTipoDeVehiculoPorIngresar(){
+    public void validarTipoDeVehiculoPorIngresar() {
         //arragne
         VehiculoTestDataBuilder vehiculo = new VehiculoTestDataBuilder()
                 .conTipo("motocarro");
         //act-assert
-        BasePrueba.assertThrows(()->vehiculo.build(), ExcepcionTipoVehiculoPermitido.class,"Solo se permiten vehiculos tipo MOTO y AUTOMOVIL");
+        BasePrueba.assertThrows(() -> vehiculo.build(), ExcepcionTipoVehiculoPermitido.class, "Solo se permiten vehiculos tipo MOTO y AUTOMOVIL");
     }
 
 

@@ -2,8 +2,6 @@ package com.ceiba.vehiculo.servicio.testdatabuilder;
 
 import com.ceiba.usuario.modelo.entidad.Vehiculo;
 
-import java.util.Locale;
-
 public class VehiculoTestDataBuilder {
 
     public static final Long ID_VEHICULO = 1L;
@@ -43,8 +41,8 @@ public class VehiculoTestDataBuilder {
         return this;
     }
 
-    public Vehiculo build(){
-        return new Vehiculo(idVehiculo,placa,cilindraje,tipo);
+    public Vehiculo build() {
+        return new Vehiculo(idVehiculo, placa, cilindraje, tipo);
     }
 
 }

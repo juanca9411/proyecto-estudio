@@ -11,11 +11,11 @@ public class ManejadorListarVehiculoByPlaca {
 
     private final DaoVehiculo daoVehiculo;
 
-    public ManejadorListarVehiculoByPlaca(DaoVehiculo daoVehiculo){
-        this.daoVehiculo=daoVehiculo;
+    public ManejadorListarVehiculoByPlaca(DaoVehiculo daoVehiculo) {
+        this.daoVehiculo = daoVehiculo;
     }
 
-    public List<DtoVehiculo> ejecutar(String placa){
+    public List<DtoVehiculo> ejecutar(String placa) {
         return this.daoVehiculo.listarByPlaca(placa);
     }
 }

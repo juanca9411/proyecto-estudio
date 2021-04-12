@@ -41,8 +41,8 @@ public class ComandoVehiculoTestDataBuilder {
         return this;
     }
 
-    public ComandoVehiculo build(){
-        return new ComandoVehiculo(idVehiculo,placa,cilindraje,tipo);
+    public ComandoVehiculo build() {
+        return new ComandoVehiculo(idVehiculo, placa, cilindraje, tipo);
     }
 
 }

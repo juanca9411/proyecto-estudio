@@ -27,22 +27,22 @@ public class ComandoControladorOrden {
     }
 
     @PostMapping
-    public ComandoRespuesta<Long> registrar(@RequestBody ComandoOrden comandoOrden){
+    public ComandoRespuesta<Long> registrar(@RequestBody ComandoOrden comandoOrden) {
         return this.manejadorRegistrarOrden.ejecutar(comandoOrden);
     }
 
     @PutMapping
-    public ComandoRespuesta<Boolean> actualizar(@RequestBody ComandoOrden comandoOrden){
+    public ComandoRespuesta<Boolean> actualizar(@RequestBody ComandoOrden comandoOrden) {
         return this.manejadorActualizarOrden.ejecutar(comandoOrden);
     }
 
     @PutMapping(value = "/generar-orden")
-    public ComandoRespuesta<Boolean> generarOrdenSalida(@RequestBody ComandoOrden comandoOrden){
+    public ComandoRespuesta<Boolean> generarOrdenSalida(@RequestBody ComandoOrden comandoOrden) {
         return this.manejadorGenerarOrdenSalida.ejecutar(comandoOrden);
     }
 
     @DeleteMapping(value = "/{idOrden}")
-    public ComandoRespuesta<Boolean> eliminar(@PathVariable Long idOrden){
+    public ComandoRespuesta<Boolean> eliminar(@PathVariable Long idOrden) {
         return this.manejadorEliminarOrden.ejecutar(idOrden);
     }
 }

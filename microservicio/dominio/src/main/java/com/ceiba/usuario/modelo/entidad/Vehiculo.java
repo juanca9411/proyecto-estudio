@@ -14,7 +14,7 @@ public class Vehiculo {
     private static final String SE_DEBE_INGRESAR_EL_CILINDRAJE = "Se debe ingresar el cilindraje del vehiculo";
     private static final String SE_DEBE_INGRESAR_EL_TIPO = "Se debe ingresar el tipo del vehiculo";
     private static final String VEHICULO_SUPERA_EL_CILINDRAJE_MAXIMO_PERMITIDO = "El vehiculo tiene un cilindraje mayor al permitido (5000)";
-    private static final String SOLO_SE_PERMITEN_VEHICULOS_TIPO_DEFINIDOS="Solo se permiten vehiculos tipo MOTO y AUTOMOVIL";
+    private static final String SOLO_SE_PERMITEN_VEHICULOS_TIPO_DEFINIDOS = "Solo se permiten vehiculos tipo MOTO y AUTOMOVIL";
 
     private static final Integer CILINDRAJE_MAXIMO_PERMITIDO = 5000;
     private static final String TIPO_MOTO_PERMITIDO = "MOTO";
@@ -47,7 +47,7 @@ public class Vehiculo {
     }
 
     private void validarTipoDeVehiculoPorIngresar(String tipo) {
-        if (! tipo.equals(TIPO_MOTO_PERMITIDO) && ! tipo.equals(TIPO_AUTOMOVIL_PERMITIDO)) {
+        if (!tipo.equals(TIPO_MOTO_PERMITIDO) && !tipo.equals(TIPO_AUTOMOVIL_PERMITIDO)) {
             throw new ExcepcionTipoVehiculoPermitido(SOLO_SE_PERMITEN_VEHICULOS_TIPO_DEFINIDOS);
         }
     }

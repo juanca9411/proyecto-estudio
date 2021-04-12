@@ -19,7 +19,7 @@ public class Tarifa {
         this.tarifaAutomovil = TARIFA_AUTOMOVIL;
     }
 
-    public Tarifa(Double tarifaMoto,Double tarifaAutomovil) {
+    public Tarifa(Double tarifaMoto, Double tarifaAutomovil) {
         this.tarifaMoto = tarifaMoto;
         this.tarifaAutomovil = tarifaAutomovil;
     }
@@ -44,7 +44,7 @@ public class Tarifa {
                 valorTotal = calcularTarifaMoto(fechaIngreso, fechaSalida);
                 break;
             default:
-                valorTotal=0D;
+                valorTotal = 0D;
         }
         return valorTotal;
     }

@@ -42,11 +42,11 @@ public class Orden {
         }
     }
 
-    public void generarOrdenSalida(String tipoVehiculo){
-       Tarifa tarifa = new Tarifa();
+    public void generarOrdenSalida(String tipoVehiculo) {
+        Tarifa tarifa = new Tarifa();
         validarObligatorio(this.fechaSalida, DEBE_INGRESAR_FECHA_DE_SALIDA);
         validarFechaFindeSemana(this.fechaSalida);
-        this.valorTotal = tarifa.calcularTotal(tipoVehiculo,this.fechaIngreso,this.fechaSalida);
+        this.valorTotal = tarifa.calcularTotal(tipoVehiculo, this.fechaIngreso, this.fechaSalida);
     }
 
 }

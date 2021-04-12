@@ -10,26 +10,26 @@ import java.time.LocalDateTime;
 public class ServicioCalcularTarifaTest {
 
     @Test
-    public void calcularTarifaAutomovil(){
+    public void calcularTarifaAutomovil() {
         //arragne
         Tarifa tarifa = new TarifaDataTestBuilder().build();
-        LocalDateTime fechaIngreso = LocalDateTime.of(2021,4,7,10,5);
-        LocalDateTime fechaSalida = LocalDateTime.of(2021,4,8,10,5);
+        LocalDateTime fechaIngreso = LocalDateTime.of(2021, 4, 7, 10, 5);
+        LocalDateTime fechaSalida = LocalDateTime.of(2021, 4, 8, 10, 5);
         //act
-        double valorTotal = tarifa.calcularTarifaAutomovil(fechaIngreso,fechaSalida);
+        double valorTotal = tarifa.calcularTarifaAutomovil(fechaIngreso, fechaSalida);
         //
-        Assert.assertEquals(43200.0,valorTotal,0.0);
+        Assert.assertEquals(43200.0, valorTotal, 0.0);
     }
 
     @Test
-    public void calcularTarifaMoto(){
+    public void calcularTarifaMoto() {
         //arragne
         Tarifa tarifa = new TarifaDataTestBuilder().build();
-        LocalDateTime fechaIngreso = LocalDateTime.of(2021,4,7,10,5);
-        LocalDateTime fechaSalida = LocalDateTime.of(2021,4,8,10,5);
+        LocalDateTime fechaIngreso = LocalDateTime.of(2021, 4, 7, 10, 5);
+        LocalDateTime fechaSalida = LocalDateTime.of(2021, 4, 8, 10, 5);
         //act
-        double valorTotal = tarifa.calcularTarifaMoto(fechaIngreso,fechaSalida);
+        double valorTotal = tarifa.calcularTarifaMoto(fechaIngreso, fechaSalida);
         //
-        Assert.assertEquals(24000.0,valorTotal,0.0);
+        Assert.assertEquals(24000.0, valorTotal, 0.0);
     }
 }

@@ -63,7 +63,7 @@ public class ServicioGenerarOrdenSalidaTest {
     public void validarGenerarOrdenDeSalidaFechaSalidaFinDeSemana() {
         //arrange
         Orden orden = new OrdenDataTestBuilder()
-                .conFechaSalida(LocalDateTime.of(2021,04,10,5,00))
+                .conFechaSalida(LocalDateTime.of(2021, 04, 10, 5, 00))
                 .build();
         RepositorioVehiculo repositorioVehiculo = Mockito.mock(RepositorioVehiculo.class);
         Mockito.when(repositorioVehiculo.getTipoVehiculo(orden.getPlaca())).thenReturn("AUTOMOVIL");
@@ -73,7 +73,6 @@ public class ServicioGenerarOrdenSalidaTest {
         BasePrueba.assertThrows(() -> orden.generarOrdenSalida(tipoVehiculo), ExcepcionDiaNoHabil.class, "Solo se pueden ingresar o salir vehiculos en dias habiles");
 
     }
-
 
 
     @Test

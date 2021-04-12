@@ -9,7 +9,7 @@ import com.ceiba.usuario.servicio.orden.ServicioRegistrarOrden;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ManejadorRegistrarOrden implements ManejadorComandoRespuesta<ComandoOrden, ComandoRespuesta<Long>>{
+public class ManejadorRegistrarOrden implements ManejadorComandoRespuesta<ComandoOrden, ComandoRespuesta<Long>> {
 
     private final ServicioRegistrarOrden servicioRegistrarOrden;
     private final FabricaOrden fabricaOrden;

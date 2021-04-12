@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 public class ServicioActualizarVehiculoTest {
 
     @Test
-    public void validarVehiculoIngresado(){
+    public void validarVehiculoIngresado() {
         //arrange
         Vehiculo vehiculo = new VehiculoTestDataBuilder()
                 .conPlaca("KHW970")
@@ -21,7 +21,7 @@ public class ServicioActualizarVehiculoTest {
         Mockito.when(repositorioVehiculo.existe(vehiculo.getPlaca())).thenReturn(false);
         ServicioActualizarVehiculo servicioActualizarVehiculo = new ServicioActualizarVehiculo(repositorioVehiculo);
         // act-assert
-        BasePrueba.assertThrows(()->servicioActualizarVehiculo.ejecutar(vehiculo), ExcepcionVehiculoYaIngresado.class,"El vehiculo no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioActualizarVehiculo.ejecutar(vehiculo), ExcepcionVehiculoYaIngresado.class, "El vehiculo no existe en el sistema");
     }
 
 }

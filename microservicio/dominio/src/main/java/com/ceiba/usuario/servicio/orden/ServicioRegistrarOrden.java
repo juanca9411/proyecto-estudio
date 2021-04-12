@@ -6,7 +6,7 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioOrden;
 
 public class ServicioRegistrarOrden {
 
-    private static final String YA_EXISTE_ESTA_ORDEN="Ya existe esta orden";
+    private static final String YA_EXISTE_ESTA_ORDEN = "Ya existe esta orden";
     private final RepositorioOrden repositorioOrden;
 
 
@@ -14,13 +14,13 @@ public class ServicioRegistrarOrden {
         this.repositorioOrden = repositorioOrden;
     }
 
-    public Long ejecutar(Orden orden){
+    public Long ejecutar(Orden orden) {
         validarExistenciaOrden(orden);
-       return this.repositorioOrden.registrar(orden);
+        return this.repositorioOrden.registrar(orden);
     }
 
-    private void validarExistenciaOrden(Orden orden){
-        if (this.repositorioOrden.existe(orden.getIdOrden()).equals(true)){
+    private void validarExistenciaOrden(Orden orden) {
+        if (this.repositorioOrden.existe(orden.getIdOrden()).equals(true)) {
             throw new ExepcionOrdenYaIngresada(YA_EXISTE_ESTA_ORDEN);
         }
     }

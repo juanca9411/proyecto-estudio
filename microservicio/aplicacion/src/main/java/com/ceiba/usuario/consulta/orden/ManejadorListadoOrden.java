@@ -15,7 +15,7 @@ public class ManejadorListadoOrden {
         this.daoOrden = daoOrden;
     }
 
-    public List<DtoOrden> listar(){
+    public List<DtoOrden> listar() {
         return this.daoOrden.listar();
     }
 }

@@ -15,18 +15,18 @@ public class ComandoControladorVehiculo {
     private final ManejadorActualizarVehiculo manejadorActualizarVehiculo;
 
     @Autowired
-    public ComandoControladorVehiculo(ManejadorRegistrarVehiculo manejadorRegistrarVehiculo, ManejadorActualizarVehiculo manejadorActualizarVehiculo){
-        this.manejadorRegistrarVehiculo=manejadorRegistrarVehiculo;
-        this.manejadorActualizarVehiculo=manejadorActualizarVehiculo;
+    public ComandoControladorVehiculo(ManejadorRegistrarVehiculo manejadorRegistrarVehiculo, ManejadorActualizarVehiculo manejadorActualizarVehiculo) {
+        this.manejadorRegistrarVehiculo = manejadorRegistrarVehiculo;
+        this.manejadorActualizarVehiculo = manejadorActualizarVehiculo;
     }
 
     @PostMapping()
-    public ComandoRespuesta<Long> registrar(@RequestBody ComandoVehiculo comandoVehiculo){
+    public ComandoRespuesta<Long> registrar(@RequestBody ComandoVehiculo comandoVehiculo) {
         return this.manejadorRegistrarVehiculo.ejecutar(comandoVehiculo);
     }
 
     @PutMapping()
-    public ComandoRespuesta<Boolean> actualizar(@RequestBody ComandoVehiculo comandoVehiculo){
+    public ComandoRespuesta<Boolean> actualizar(@RequestBody ComandoVehiculo comandoVehiculo) {
         return this.manejadorActualizarVehiculo.ejecutar(comandoVehiculo);
     }
 

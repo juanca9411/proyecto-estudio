@@ -17,17 +17,17 @@ public class TarifaDataTestBuilder {
     }
 
     public TarifaDataTestBuilder conTarifaMoto(Double tarifaMoto) {
-        this.tarifaMoto=tarifaMoto;
+        this.tarifaMoto = tarifaMoto;
         return this;
     }
 
     public TarifaDataTestBuilder conTarifaAutomovil(Double tarifaAutomovil) {
-        this.tarifaAutomovil=tarifaAutomovil;
+        this.tarifaAutomovil = tarifaAutomovil;
         return this;
     }
 
-    public Tarifa build(){
-        return new Tarifa(tarifaMoto,tarifaAutomovil);
+    public Tarifa build() {
+        return new Tarifa(tarifaMoto, tarifaAutomovil);
     }
 
 }

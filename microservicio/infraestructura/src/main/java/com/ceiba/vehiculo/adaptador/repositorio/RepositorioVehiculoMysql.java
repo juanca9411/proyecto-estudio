@@ -35,14 +35,14 @@ public class RepositorioVehiculoMysql implements RepositorioVehiculo {
 
     @Override
     public boolean actualizar(Vehiculo vehiculo) {
-      return  this.customNamedParameterJdbcTemplate.actualizar(sqlActualizar,vehiculo);
+        return this.customNamedParameterJdbcTemplate.actualizar(sqlActualizar, vehiculo);
     }
 
     @Override
     public boolean existe(String placa) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("placa", placa);
-       return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,parameterSource,Boolean.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
 
     }
 
@@ -50,6 +50,6 @@ public class RepositorioVehiculoMysql implements RepositorioVehiculo {
     public String getTipoVehiculo(String placa) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("placa", placa);
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlSeleccionarTipoVehiculo,parameterSource,String.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlSeleccionarTipoVehiculo, parameterSource, String.class);
     }
 }

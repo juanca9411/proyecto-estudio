@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FabricaOrden {
 
-    public Orden crear(ComandoOrden comandoOrden){
+    public Orden crear(ComandoOrden comandoOrden) {
         return new Orden(
                 comandoOrden.getIdOrden(),
                 comandoOrden.getPlaca(),

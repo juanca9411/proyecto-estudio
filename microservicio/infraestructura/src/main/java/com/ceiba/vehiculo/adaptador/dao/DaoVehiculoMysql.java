@@ -16,10 +16,10 @@ public class DaoVehiculoMysql implements DaoVehiculo {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
 
-    @SqlStatement(namespace="vehiculo", value="listar")
+    @SqlStatement(namespace = "vehiculo", value = "listar")
     private static String sqlListar;
 
-    @SqlStatement(namespace="vehiculo", value="listarByPlaca")
+    @SqlStatement(namespace = "vehiculo", value = "listarByPlaca")
     private static String sqlListarByPlaca;
 
     public DaoVehiculoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -35,7 +35,7 @@ public class DaoVehiculoMysql implements DaoVehiculo {
     @Override
     public List<DtoVehiculo> listarByPlaca(String placa) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("placa",placa);
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarByPlaca,parameterSource,new MapeoVehiculo());
+        parameterSource.addValue("placa", placa);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarByPlaca, parameterSource, new MapeoVehiculo());
     }
 }

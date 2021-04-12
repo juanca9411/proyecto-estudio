@@ -18,46 +18,42 @@ public class ComandoOrdenDataTestBuilder {
     private LocalDateTime fechaSalida;
     private Double valorTotal;
 
-    public ComandoOrdenDataTestBuilder(){
-        this.idOrden=ID_ORDEN;
-        this.placa=PLACA;
-        this.fechaIngreso=FECHA_INGRESO;
-        this.fechaSalida=FECHA_SALIDA;
-        this.valorTotal=VALOR_TOTAL;
+    public ComandoOrdenDataTestBuilder() {
+        this.idOrden = ID_ORDEN;
+        this.placa = PLACA;
+        this.fechaIngreso = FECHA_INGRESO;
+        this.fechaSalida = FECHA_SALIDA;
+        this.valorTotal = VALOR_TOTAL;
     }
 
-    public ComandoOrdenDataTestBuilder conIdOrden(Long idOrden){
-        this.idOrden=idOrden;
+    public ComandoOrdenDataTestBuilder conIdOrden(Long idOrden) {
+        this.idOrden = idOrden;
         return this;
     }
 
-    public ComandoOrdenDataTestBuilder conPlaca(String placa){
-        this.placa=placa;
+    public ComandoOrdenDataTestBuilder conPlaca(String placa) {
+        this.placa = placa;
         return this;
     }
 
-    public ComandoOrdenDataTestBuilder conFechaIngreso(LocalDateTime fechaIngreso){
-        this.fechaIngreso=fechaIngreso;
+    public ComandoOrdenDataTestBuilder conFechaIngreso(LocalDateTime fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
         return this;
     }
 
-    public ComandoOrdenDataTestBuilder conFechaSalida(LocalDateTime fechaSalida){
-        this.fechaSalida=fechaSalida;
+    public ComandoOrdenDataTestBuilder conFechaSalida(LocalDateTime fechaSalida) {
+        this.fechaSalida = fechaSalida;
         return this;
     }
 
-    public ComandoOrdenDataTestBuilder conValorTotal(Double valorTotal){
-        this.valorTotal=valorTotal;
+    public ComandoOrdenDataTestBuilder conValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
         return this;
     }
 
-    public ComandoOrden build(){
-        return new ComandoOrden(idOrden,placa,fechaIngreso,fechaSalida,valorTotal);
+    public ComandoOrden build() {
+        return new ComandoOrden(idOrden, placa, fechaIngreso, fechaSalida, valorTotal);
     }
-
-
-
-
 
 
 }

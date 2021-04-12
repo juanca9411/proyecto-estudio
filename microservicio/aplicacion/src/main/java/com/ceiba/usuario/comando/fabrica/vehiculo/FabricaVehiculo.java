@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FabricaVehiculo {
 
-    public Vehiculo crear(ComandoVehiculo comandoVehiculo){
+    public Vehiculo crear(ComandoVehiculo comandoVehiculo) {
         return new Vehiculo(
                 comandoVehiculo.getIdVehiculo(),
                 comandoVehiculo.getPlaca(),
